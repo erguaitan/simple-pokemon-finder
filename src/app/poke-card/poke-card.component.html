@@ -1,0 +1,14 @@
+<div class="poke-card">
+  <div class="card-img-cont">
+    <img [src]="pokemonInfo.foto" alt="{{ pokemonInfo.nombre }}" />
+  </div>
+  <div class="poke-info">
+    <p class="poke-nombre">{{ pokemonInfo.nombre }}</p>
+    <p class="info-extra">{{ pokemonInfo.altura }} m</p>
+    <p class="info-extra">{{ pokemonInfo.peso }} kg</p>
+    <p class="info-extra">{{ pokemonInfo.tipo }}</p>
+  </div>
+  <div class="poke-stats">
+    <p *ngFor="let stat of pokemonInfo.stats">{{ stat }}</p>
+  </div>
+</div>

@@ -1,0 +1,77 @@
+.pokemon-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  height: 100vh;
+  background-color: #f2f2f2;
+}
+
+h1 {
+  text-align: center;
+  margin: 50px;
+  color: #1f1f1f;
+}
+
+form {
+  display: flex;
+  margin-bottom: 10px;
+  max-width: 500px;
+}
+
+form > input {
+  flex: 1;
+  padding: 7px 15px;
+  border-radius: 10px 0 0 10px;
+  border: 2px solid #1f1f1f;
+  border-right: 0;
+}
+
+form > input:focus {
+  outline: 0;
+}
+
+form > button {
+  width: 100px;
+  padding: 7px;
+  border-radius: 0 10px 10px 0;
+  color: white;
+  background-color: #1f1f1f;
+  border: 2px solid #1f1f1f;
+  cursor: pointer;
+}
+
+.clear-search-but {
+  padding: 7px 50px;
+  border-radius: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: aliceblue;
+  color: #1f1f1f;
+  font-size: 12px;
+  margin-bottom: 10px;
+  border: 1px solid #1f1f1f;
+  box-shadow: 2px 2px 0px #1f1f1f;
+  cursor: pointer;
+}
+
+main {
+  overflow-y: auto;
+  width: 100%;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 250px);
+  justify-content: center;
+  gap: 20px;
+}
+
+main > button {
+  background-color: aliceblue;
+  box-shadow: 1px 1px 3px #0000005e;
+  min-height: 300px;
+  color: #1f1f1f;
+  font-size: 17px;
+  border: 0;
+  font-weight: bold;
+  cursor: pointer;
+}

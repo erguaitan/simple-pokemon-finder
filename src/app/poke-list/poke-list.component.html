@@ -1,0 +1,29 @@
+<div class="pokemon-list">
+  <h1>Prueba Dev Roams - Pokemon</h1>
+  <form (ngSubmit)="onPokeSearch()">
+    <input
+      [(ngModel)]="pokemonName"
+      name="pokemonName"
+      type="text"
+      placeholder="Inserta nombre"
+    />
+    <button type="submit">Buscar</button>
+  </form>
+  <button
+    class="clear-search-but"
+    *ngIf="isPokeSearchActive"
+    (click)="clearPokeSearch()"
+  >
+    Anular Busqueda
+  </button>
+  <div *ngIf="pokemonInfo.length === 0">
+    <p>No hay Pokémon en la lista.</p>
+  </div>
+  <main *ngIf="pokemonInfo.length > 0">
+    <app-poke-card
+      *ngFor="let pokemon of pokemonInfo; trackBy: trackByFn"
+      [pokemonInfo]="pokemon"
+    ></app-poke-card>
+    <button *ngIf="urlFilter !== null" (click)="loadMorePokemon()">Cargar más...</button>
+  </main>
+</div>
