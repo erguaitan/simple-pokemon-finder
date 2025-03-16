@@ -2,7 +2,7 @@
 
 
 ## 🏹 functionalities
-* see every pokémon and its stats
+* display every pokémon and its stats
 * search for pokémon whose name contains the text entered in the search field.
 
 ## ✒️ design
